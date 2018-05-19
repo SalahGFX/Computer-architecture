@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#app {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 100px;
+}
+
+footer {
+	position: absolute;
+	background: #2b2f32;
+	color: white;
+	bottom: 0;
+	right: 0;
+	font-size: .8rem;
+	font-family: 'Roboto';
+	padding: 2px 4px;
+	opacity: 0.9;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px 0 0 0;
+	.heart {
+		color: #f44336;
+	}
+	a {
+		color: rgb(120, 120, 120);
+		text-decoration: none;
+		&:hover {
+			color: rgb(160, 160, 160);
+		}
+	}
+}
+
+.box {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+	width: 100vw;
+	max-width: 800px;
+	color: #263238;
+	font-family: "Roboto";
+	transform: scale(1);
+	transition: transform 0.3s ease;
+}
+
+.box .question {
+	padding: 40px;
+	line-height: 40px;
+	font-family: "Roboto";
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.box .question h4 {
+	color: #a3a2b6;
+}
+
+.box .question p {
+	font-size: 1.4rem;
+}
+
+.box .answer {
+	padding: 20px;
+	padding-right: 5px;
+	line-height: 30px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	transition: 0.3s ease;
+}
+
+.box .answer:hover {
+	background: #f0f0f0;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+.box .answer .icon {
+	color: #8c8c8c;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #8c8c8c;
+	transform: scale(0.8);
+}
+
+.box .answer.checked .icon {
+	border-color: #2196F3;
+	color: #2196F3;
+}
+
+.box .answer.checked {
+	background: #E3F2FD;
+	box-shadow: 0 0 0 1px #2196F3 inset;
+}
+
+.box .answer.true .icon {
+	border-color: #4CAF50;
+	color: #4CAF50;
+}
+
+.box .answer.true {
+	background: #e8f5e9;
+	box-shadow: 0 0 transparent;
+}
+
+.box .answer.false .icon {
+	border-color: #f44336;
+	color: #f44336;
+}
+
+.box .answer.false {
+	background: #FFEBEE;
+	box-shadow: 0 0 transparent;
+}
+
+.box .answer.not--included .icon {
+	border-color: #FF9800;
+	color: #FF9800;
+}
+
+.box .answer.not--included {
+	background: #FFF3E0;
+	box-shadow: 0 0 transparent;
+}
+
+.box .answer.init .icon {
+	color: #8c8c8c;
+	border-color: #8c8c8c;
+}
+
+.box .answer.init {
+	background: transparent;
+	box-shadow: 0 0 transparent;
+}
+
+.box .colors {
+	position: absolute;
+	width: 320px;
+	height: 30px;
+	font-weight: bold;
+	top: -135px;
+	left: calc( 50% - 167.5px);
+	display: flex;
+	justify-content: space-between;
+	border-radius: 0 0 10px 10px;
+	backface-visibility: hidden;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	transition: 0.5s ease;
+}
+
+.box .colors.show {
+	top: -101px;
+	transition: 0.5s ease;
+}
+
+.box .colors div {
+	width: 33.33%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box .colors div.true {
+	background: #e8f5e9;
+	color: #4CAF50;
+}
+
+.box .colors div.false {
+	background: #FFEBEE;
+	color: #f44336;
+}
+
+.box .colors div.omit {
+	background: #FFF3E0;
+	color: #FF9800;
+}
+
+@media screen and (max-width: 440px) {
+	.box {
+		transform: scale(0.95);
+		transition: transform 0.3s ease;
+	}
+	.box .colors {
+		top: -160px;
+	}
+	.box .colors.show {
+		top: -125px;
+		transition: 0.5s ease;
+	}
+}
+
+.options {
+	width: 100%;
+	max-width: 440px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+	transition: 0.3s ease;
+}
+
+.options button {
+	background: white;
+	border: 0;
+	padding: 15px 30px;
+	cursor: pointer;
+	font-size: 2rem;
+	outline: 0;
+	color: #8c8c8c;
+	transition: 0.3s ease;
+}
+
+.options button:hover {
+	color: #585858;
+	transition: 0.3s ease;
+}
+
+.options button.disable {
+	background: #e8e8e8;
+	color: #bbb;
+	cursor: auto;
+}
+
+.options button.active {
+	color: #4caf50;
+}
+
+@media screen and (max-width: 440px) {
+	.options {
+		width: 250px;
+	}
+	.options button {
+		padding: 8px 15.3px;
+		font-size: 1.4rem;
+	}
+}
