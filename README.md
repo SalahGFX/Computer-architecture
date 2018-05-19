@@ -1,2 +1,2 @@
 # Computer-architecture
-This a set of french QCM about the computer architecture
+This is a set of french QCM about computer architecture
