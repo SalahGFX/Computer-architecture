@@ -2,41 +2,41 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #app {
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	padding-top: 100px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
 }
 
 footer {
-	position: absolute;
-	background: #2b2f32;
-	color: white;
-	bottom: 0;
-	right: 0;
-	font-size: .8rem;
-	font-family: 'Roboto';
-	padding: 2px 4px;
-	opacity: 0.9;
-	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px 0 0 0;
-	.heart {
-		color: #f44336;
-	}
-	a {
-		color: rgb(120, 120, 120);
-		text-decoration: none;
-		&:hover {
-			color: rgb(160, 160, 160);
-		}
-	}
+  position: absolute;
+  background: #2b2f32;
+  color: white;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+  font-family: "Roboto";
+  padding: 2px 4px;
+  opacity: 0.9;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px 0 0 0;
+}
+footer .heart {
+  color: #f44336;
+}
+footer a {
+  color: #787878;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #a0a0a0;
 }
 
 .box {
