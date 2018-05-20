@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 ::-webkit-scrollbar {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background: transparent;
   width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background: #455a64;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background: #d4d4d4;
   border-radius: 10px;
 }
@@ -35,8 +32,7 @@ footer {
   font-family: "Roboto";
   padding: 2px 4px;
   opacity: 0.9;
-  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 4px 0 0;
   display: inline;
 }
@@ -54,21 +50,14 @@ footer a:hover {
 .box {
 	background: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-	        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 	max-width: 800px;
 	color: #263238;
   margin: auto;
   margin-top: 100px;
 	font-family: "Roboto";
-	-webkit-transform: scale(1);
-	    -ms-transform: scale(1);
-	        transform: scale(1);
-	-webkit-transition: -webkit-transform 0.3s ease;
-	transition: -webkit-transform 0.3s ease;
-	-o-transition: transform 0.3s ease;
+	transform: scale(1);
 	transition: transform 0.3s ease;
-	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .box .question {
@@ -91,16 +80,12 @@ footer a:hover {
 	padding-right: 5px;
 	line-height: 30px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	-webkit-transition: 0.3s ease;
-	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 }
 
 .box .answer:hover {
 	background: #f0f0f0;
 	cursor: pointer;
-	-webkit-transition: 0.3s ease;
-	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 }
 
@@ -109,19 +94,11 @@ footer a:hover {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
 	display: inline-flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	justify-content: center;
+	align-items: center;
 	border: 2px solid #8c8c8c;
-	-webkit-transform: scale(0.8);
-	    -ms-transform: scale(0.8);
-	        transform: scale(0.8);
+	transform: scale(0.8);
 }
 
 .box .answer.checked .icon {
@@ -131,8 +108,7 @@ footer a:hover {
 
 .box .answer.checked {
 	background: #E3F2FD;
-	-webkit-box-shadow: 0 0 0 1px #2196F3 inset;
-	        box-shadow: 0 0 0 1px #2196F3 inset;
+	box-shadow: 0 0 0 1px #2196F3 inset;
 }
 
 .box .answer.true .icon {
@@ -142,8 +118,7 @@ footer a:hover {
 
 .box .answer.true {
 	background: #e8f5e9;
-	-webkit-box-shadow: 0 0 transparent;
-	        box-shadow: 0 0 transparent;
+	box-shadow: 0 0 transparent;
 }
 
 .box .answer.false .icon {
@@ -153,8 +128,7 @@ footer a:hover {
 
 .box .answer.false {
 	background: #FFEBEE;
-	-webkit-box-shadow: 0 0 transparent;
-	        box-shadow: 0 0 transparent;
+	box-shadow: 0 0 transparent;
 }
 
 .box .answer.not--included .icon {
@@ -164,8 +138,7 @@ footer a:hover {
 
 .box .answer.not--included {
 	background: #FFF3E0;
-	-webkit-box-shadow: 0 0 transparent;
-	        box-shadow: 0 0 transparent;
+	box-shadow: 0 0 transparent;
 }
 
 .box .answer.init .icon {
@@ -175,8 +148,7 @@ footer a:hover {
 
 .box .answer.init {
 	background: transparent;
-	-webkit-box-shadow: 0 0 transparent;
-	        box-shadow: 0 0 transparent;
+	box-shadow: 0 0 transparent;
 }
 
 .box .colors {
@@ -186,41 +158,25 @@ footer a:hover {
 	font-weight: bold;
 	top: -135px;
 	left: calc( 50% - 167.5px);
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 	border-radius: 0 0 10px 10px;
-	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
-	-webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-	        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+	backface-visibility: hidden;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
-	-webkit-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
 	transition: 0.5s ease;
 }
 
 .box .colors.show {
 	top: -101px;
-	-webkit-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
 	transition: 0.5s ease;
 }
 
 .box .colors div {
 	width: 33.33%;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .box .colors div.true {
@@ -240,22 +196,14 @@ footer a:hover {
 
 @media screen and (max-width: 440px) {
 	.box {
-		-webkit-transform: scale(0.95);
-		    -ms-transform: scale(0.95);
-		        transform: scale(0.95);
-		-webkit-transition: -webkit-transform 0.3s ease;
-		transition: -webkit-transform 0.3s ease;
-		-o-transition: transform 0.3s ease;
+		transform: scale(0.95);
 		transition: transform 0.3s ease;
-		transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 	}
 	.box .colors {
 		top: -160px;
 	}
 	.box .colors.show {
 		top: -125px;
-		-webkit-transition: 0.5s ease;
-		-o-transition: 0.5s ease;
 		transition: 0.5s ease;
 	}
 }
@@ -264,19 +212,12 @@ footer a:hover {
 	width: 100%;
 	max-width: 440px;
 	margin: auto;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: center;
 	margin-top: 10px;
 	overflow: hidden;
 	border-radius: 10px;
-	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-	        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-	-webkit-transition: 0.3s ease;
-	-o-transition: 0.3s ease;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 	transition: 0.3s ease;
   margin-bottom: 50px;
 }
@@ -289,15 +230,11 @@ footer a:hover {
 	font-size: 2rem;
 	outline: 0;
 	color: #8c8c8c;
-	-webkit-transition: 0.3s ease;
-	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 }
 
 .options button:hover {
 	color: #585858;
-	-webkit-transition: 0.3s ease;
-	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
 }
 
