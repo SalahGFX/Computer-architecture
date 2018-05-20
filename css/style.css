@@ -5,6 +5,7 @@
           appearance: none;
   background: transparent;
   width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-thumb {
   -webkit-appearance: none;
@@ -23,13 +24,14 @@
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  min-height:100%;
 }
 
 footer {
   background: #2b2f32;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: calc(50% - 70px);
   color: white;
   font-size: 0.7rem;
   font-family: "Roboto";
@@ -37,8 +39,9 @@ footer {
   opacity: 0.9;
   -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0 4px 0 0;
-  display: inline;
+  border-radius: 4px 4px 0 0;
+  width: 140px;
+  text-align: center;
 }
 footer .heart {
   color: #f44336;
