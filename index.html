@@ -5,9 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="genrator" content="atom">
+    <meta name="author" content="salah eddine lachkar">
+    <meta name="description" content="This is a set of french QCM about Computer Architecture">
+    <meta name="keywords" content="qcm, computer, architecture, smi, s4, salah eddine, lachkar, informatique, info, vueJs, github, morocco">
     <title>Architecture d'ordinateur QCM</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="imgae/png" href="asset/laptop.png">
 </head>
@@ -17,35 +22,33 @@
       <strong>We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app">
-        <div class="qcm">
-            <div class="box">
-                <div class="question">
-                    <h4>QUESTION {{ index + 1 }} DE {{ questions.length }}</h4>
-                    <p>{{ questions[index].question }}</p>
-                </div>
-                <div class="answer" ref="answer" v-for="(a, i) in questions[index].answers" :key="i" @click="addClass('checked', i)">
-                    <div class="icon">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <span>{{ a[0] }}</span>
-                </div>
-                <div class="colors" :class="{ show: showV }">
-                    <div class="true">true</div>
-                    <div class="false">false</div>
-                    <div class="omit">omit</div>
-                </div>
-            </div>
+      <div class="box">
+          <div class="question">
+              <h4>QUESTION {{ index + 1 }} DE {{ questions.length }}</h4>
+              <p>{{ questions[index].question }}</p>
+          </div>
+          <div class="answer" ref="answer" v-for="(a, i) in questions[index].answers" :key="i" @click="addClass('checked', i)">
+              <div class="icon">
+                  <i class="fas fa-check"></i>
+              </div>
+              <span>{{ a[0] }}</span>
+          </div>
+          <div class="colors" :class="{ show: showV }">
+              <div class="true">true</div>
+              <div class="false">false</div>
+              <div class="omit">omit</div>
+          </div>
+      </div>
 
-            <div class="options">
-                <button type="button" title="precedent" @click="prec" :class="{ disable: index === 0}"><i class="fas fa-chevron-left"></i></button>
-                <button type="button" title="voir les reponses" @click="className" :class="{ active: show}"><i class="far fa-eye"></i></button>
-                <button type="button" title="verifier" @click="verify" :class="{ active: showV}"><i class="fas fa-circle-notch"></i></button>
-                <button type="button" title="réinitialisation" @click="reset"><i class="fas fa-redo-alt"></i></button>
-                <button type="button" title="suivant" @click="next" :class="{ disable: index === questions.length - 1}"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-        <footer>Made with <span class="heart"><i class="fas fa-heart"></i></span> by <a href="https://www.facebook.com/g.bsalah" target="_blank">SalahGFX</a></footer>
-    </div>    
+      <div class="options">
+          <button type="button" title="precedent" @click="prec" :class="{ disable: index === 0}"><i class="fas fa-chevron-left"></i></button>
+          <button type="button" title="voir les reponses" @click="className" :class="{ active: show}"><i class="far fa-eye"></i></button>
+          <button type="button" title="verifier" @click="verify" :class="{ active: showV}"><i class="fas fa-circle-notch"></i></button>
+          <button type="button" title="réinitialisation" @click="reset"><i class="fas fa-redo-alt"></i></button>
+          <button type="button" title="suivant" @click="next" :class="{ disable: index === questions.length - 1}"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <footer>Made with <span class="heart"><i class="fas fa-heart"></i></span> by <a href="https://www.facebook.com/g.bsalah" target="_blank">SalahGFX</a></footer>
+    </div>
     <script src="js/main.js"></script>
 </body>
 

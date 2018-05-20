@@ -1,32 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+::-webkit-scrollbar {
+  appearance: none;
+  background: transparent;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  appearance: none;
+  background: #455a64;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  appearance: none;
+  background: #d4d4d4;
+  border-radius: 10px;
 }
 
 #app {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
+  overflow: auto;
 }
 
 footer {
-  position: absolute;
   background: #2b2f32;
-  color: white;
+  position: absolute;
   bottom: 0;
-  right: 0;
-  font-size: 0.8rem;
+  left: 0;
+  color: white;
+  font-size: 0.7rem;
   font-family: "Roboto";
   padding: 2px 4px;
   opacity: 0.9;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px 0 0 0;
+  border-radius: 0 4px 0 0;
+  display: inline;
 }
 footer .heart {
   color: #f44336;
@@ -43,9 +51,10 @@ footer a:hover {
 	background: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-	width: 100vw;
 	max-width: 800px;
 	color: #263238;
+  margin: auto;
+  margin-top: 100px;
 	font-family: "Roboto";
 	transform: scale(1);
 	transition: transform 0.3s ease;
@@ -210,6 +219,7 @@ footer a:hover {
 	border-radius: 10px;
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 	transition: 0.3s ease;
+  margin-bottom: 50px;
 }
 
 .options button {
