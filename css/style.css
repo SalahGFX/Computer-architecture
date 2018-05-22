@@ -25,6 +25,9 @@
   height: 100vh;
   overflow: auto;
   min-height:100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#70C1B3), to(#247BA0));
+  background-image: -webkit-linear-gradient(#70C1B3, #247BA0);
+  background-image: -o-linear-gradient(#70C1B3, #247BA0);
   background-image: linear-gradient(#70C1B3, #247BA0);
 }
 

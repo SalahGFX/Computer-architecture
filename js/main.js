@@ -537,85 +537,78 @@ new Vue({
         ],
         index: 0,
         show: false,
-        showV: false
+        verify: false
     },
     methods: {
-        addClass: function(className, index) {
-            if (!this.show && !this.showV) {
-                if (this.questions[this.index].answers.length === 2) {
-                    if (index === 0) {
-                        this.$refs.answer[0].classList.toggle(className)
-                        this.$refs.answer[1].classList.remove(className)
-                    } else {
-                        this.$refs.answer[1].classList.toggle(className)
-                        this.$refs.answer[0].classList.remove(className)
-                    }
-                } else {
-                    this.$refs.answer[index].classList.toggle(className)
-                }
+        _addClass(className, index) {
+            var a = this.$refs.answer;
+            if (!this.show && !this.verify) {
+                if (this.questions[this.index].answers.length === 2) index === 0 ? rm(0, 1) : rm(1, 0);
+      					else a[index].classList.toggle(className);
             }
 
+            function rm(i, j) {
+              a[i].classList.toggle(className);
+              a[j].classList.remove(className);
+            }
         },
-        prec() {
+        _prec() {
+            var a = this.$refs.answer;
             if (this.index - 1 != -1) this.index--;
-            for (var i = 0; i < this.questions[this.index].answers.length; i++) {
-                if (this.$refs.answer[i]) this.$refs.answer[i].className = 'answer'
-            }
-
-            this.show = false
-            this.showV = false
-        },
-        next() {
-            if (this.index + 1 != this.questions.length) this.index++;
-            for (var i = 0; i < this.questions[this.index].answers.length; i++) {
-                if (this.$refs.answer[i]) this.$refs.answer[i].className = 'answer'
-            }
-            this.show = false
-            this.showV = false
-        },
-        className() {
-            if (!this.showV) {
-                this.show = !this.show
-                for (var i = 0; i < this.questions[this.index].answers.length; i++) {
-                    if (this.questions[this.index].answers[i][1]) {
-                        this.$refs.answer[i].classList.toggle("true")
-                    } else {
-                        this.$refs.answer[i].classList.toggle("init")
-                    }
-                }
-            }
-        },
-        verify() {
-            if (!this.show) {
-                for (var i = 0; i < this.questions[this.index].answers.length; i++) {
-                    if (this.questions[this.index].answers[i][1] === 1 &&
-                        this.$refs.answer[i].classList.contains("checked")) {
-                        this.$refs.answer[i].classList.toggle("true")
-                    } else if (this.$refs.answer[i].classList.contains("checked")) {
-                        this.$refs.answer[i].classList.toggle("false")
-                    } else if (this.questions[this.index].answers[i][1] === 1) {
-                        this.$refs.answer[i].classList.toggle("not--included")
-                    }
-                }
-                this.showV = !this.showV
-            }
-        },
-        reset() {
-            this.show = false
-            this.showV = false
-            for (var i = 0; i < this.questions[this.index].answers.length; i++) {
-                this.$refs.answer[i].className = 'answer'
-            }
-            this.questions[this.index].answers.sort(function() {
-                return 0.5 - Math.random()
+            this.questions[this.index].answers.forEach((el, i)=> {
+              if (a[i]) a[i].className = 'answer';
             });
+
+            this.show = false;
+            this.verify = false;
+        },
+        _next() {
+            var a = this.$refs.answer;
+            if (this.index + 1 != this.questions.length) this.index++;
+            this.questions[this.index].answers.forEach((el, i)=> {
+              if (a[i]) a[i].className = 'answer';
+            });
+
+            this.show = false;
+            this.verify = false;
+        },
+        _show() {
+            if (!this.verify) {
+                this.show = !this.show;
+                var a = this.$refs.answer;
+                this.questions[this.index].answers.forEach((el, i) => {
+                   a[i].classList.toggle(el[1] ? "true" : "init");
+                });
+            }
+        },
+        _verify() {
+            if (!this.show) {
+                var a = this.$refs.answer;
+                this.questions[this.index].answers.forEach((el, i) => {
+                  let isChecked = a[i].classList.contains("checked");
+                  if (el[1] === 1 || isChecked) {
+                    if (el[1] === 1 && isChecked) toggle("true", i);
+                    else toggle(isChecked ? "false" : "not--included", i);
+                  }
+                });
+
+                function toggle(className, i) {
+                  a[i].classList.toggle(className);
+                }
+
+                this.verify = !this.verify;
+            }
+        },
+        _reset() {
+            this.show = false;
+            this.verify = false;
+            for (var i = 0; i < this.questions[this.index].answers.length; i++) this.$refs.answer[i].className = 'answer';
+            this.questions[this.index].answers.sort(() => 0.5 - Math.random());
         }
     },
     created() {
-        for (var i = 0; i < this.questions.length; i++) {
-            this.questions[i].answers.sort(function() {
-                return 0.5 - Math.random()
-            });
-        }
+        this.questions.forEach(el => {
+          el.answers.sort(() => 0.5 - Math.random());
+        });
     }
 }).$mount('#app');

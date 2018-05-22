@@ -11,7 +11,7 @@
     <meta name="keywords" content="qcm, computer, architecture, smi, s4, salah eddine, lachkar, informatique, info, vueJs, github, morocco">
     <title>Architecture d'ordinateur QCM</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/vue.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="imgae/png" href="asset/laptop.png">
@@ -27,7 +27,7 @@
               <h4>QUESTION {{ index + 1 }} DE {{ questions.length }}</h4>
               <p>{{ questions[index].question }}</p>
           </div>
-          <div class="answer" ref="answer" v-for="(a, i) in questions[index].answers" :key="i" @click="addClass('checked', i)">
+          <div class="answer" ref="answer" v-for="(a, i) in questions[index].answers" :key="i" @click="_addClass('checked', i)">
               <div class="icon">
                   <i class="fas fa-check"></i>
               </div>
@@ -36,11 +36,11 @@
       </div>
 
       <div class="options">
-          <button type="button" title="precedent" @click="prec" :class="{ disable: index === 0}"><i class="fas fa-chevron-left"></i></button>
-          <button type="button" title="voir les reponses" @click="className" :class="{ active: show}"><i class="far fa-eye"></i></button>
-          <button type="button" title="verifier" @click="verify" :class="{ active: showV}"><i class="fas fa-circle-notch"></i></button>
-          <button type="button" title="réinitialisation" @click="reset"><i class="fas fa-redo-alt"></i></button>
-          <button type="button" title="suivant" @click="next" :class="{ disable: index === questions.length - 1}"><i class="fas fa-chevron-right"></i></button>
+          <button type="button" title="Précédent" @click="_prec" :class="{ disable: index === 0}"><i class="fas fa-chevron-left"></i></button>
+          <button type="button" title="Voir les réponses" @click="_show" :class="{ active: show}"><i class="far fa-eye"></i></button>
+          <button type="button" title="Vérifier" @click="_verify" :class="{ active: verify}"><i class="fas fa-circle-notch"></i></button>
+          <button type="button" title="Réinitialiser" @click="_reset"><i class="fas fa-redo-alt"></i></button>
+          <button type="button" title="Suivant" @click="_next" :class="{ disable: index === questions.length - 1}"><i class="fas fa-chevron-right"></i></button>
       </div>
       <footer>Made with <span class="heart"><i class="fas fa-heart"></i></span> by <a href="https://www.facebook.com/g.bsalah" target="_blank">Salah Eddine Lachkar</a></footer>
     </div>
