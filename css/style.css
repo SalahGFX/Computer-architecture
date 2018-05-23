@@ -176,8 +176,7 @@
 }
 
 .options {
-	width: 100%;
-	max-width: 440px;
+	width: 440px;
 	margin: auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -200,6 +199,7 @@
 .options button {
 	background: white;
 	border: 0;
+  flex: 1;
 	padding: 15px 30px;
 	cursor: pointer;
 	font-size: 2rem;
