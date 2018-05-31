@@ -71,7 +71,8 @@
   -moz-appearance: none;
        appearance: none;
   background: rgba(0, 0, 0, 0.15);
-  height: 2px;
+  height: 10px;
+  border-radius: 20px;
   width: 80%;
   outline: 0;
 }
