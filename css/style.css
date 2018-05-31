@@ -51,6 +51,35 @@
 	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
+.box .slider {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .slider input {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.15);
+  height: 2px;
+  width: 80%;
+  outline: 0;
+}
+
+.box .slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 .box .question {
 	padding: 40px;
 	line-height: 40px;
