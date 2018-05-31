@@ -39,6 +39,7 @@
 	max-width: 800px;
 	color: #263238;
   margin: auto;
+  border-radius: 10px 10px 0 0;
   margin-top: 100px;
 	font-family: "Roboto";
 	-webkit-transform: scale(1);
