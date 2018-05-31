@@ -456,7 +456,7 @@ var questions = [{
         question: "Qu'est-ce qu'un WatchDog Timer (chien de garde)?",
         answers: [
             ["Un dispositif de correction d'erreur (comme le CRC).", 0],
-            ["Un dispositif réagissant au plantage du µC", 0],
+            ["Un dispositif réagissant au plantage du µC", 1],
             ["un programme de radio-réveil digital", 0]
         ]
     },
@@ -465,7 +465,7 @@ var questions = [{
         answers: [
             ["Le registre contenant l'instruction en cours.", 0],
             ["Le registre contenant l'adresse de l'instruction en cours.", 0],
-            ["Le registre contenant l'adresse de l'instruction suivante.", 0]
+            ["Le registre contenant l'adresse de l'instruction suivante.", 1]
         ]
     },
     {
@@ -473,13 +473,13 @@ var questions = [{
         answers: [
             ["1", 0],
             ["2", 0],
-            ["3", 0]
+            ["3", 1]
         ]
     },
     {
         question: "Un microcontrôleur disposant d'un bus d'adresse de 16 bits aura accès à:",
         answers: [
-            ["64ko de mémoire.", 0],
+            ["64ko de mémoire.", 1],
             ["128ko de mémoire.", 0],
             ["256ko de mémoire.", 0]
         ]
@@ -488,14 +488,14 @@ var questions = [{
         question: "Un microprocesseur dit RISC a pour principales caractéristiques:",
         answers: [
             ["Un set d'instructions étendu et un nombre de cycles par instruction élevé", 0],
-            ["Des set d'instructions et nombre de cycles par instruction réduits", 0],
+            ["Des set d'instructions et nombre de cycles par instruction réduits", 1],
             ["Un set d'instructions réduit et un nombre de cycles par instruction élevé", 0]
         ]
     },
     {
         question: "À quoi sert le signal ALE d'un microprocesseur?",
         answers: [
-            ["À signaler à la circuiterie périphérique qu'une adresse est présente.", 0],
+            ["À signaler à la circuiterie périphérique qu'une adresse est présente.", 1],
             ["À lire la mémoire.", 0],
             ["À écrire la mémoire.", 0]
         ]
@@ -505,13 +505,13 @@ var questions = [{
         answers: [
             ["Lorsque le µC est alimenté en 5V", 0],
             ["Lorsqu'on utilise une RAM dynamique", 0],
-            ["Lorsque ces dernières sont à drain/collecteur ouvert", 0]
+            ["Lorsque ces dernières sont à drain/collecteur ouvert", 1]
         ]
     },
     {
         question: "Problème: Votre montage à microcontrôleur doit réagir à un événement. Toutefois, il dure beaucoup trop peu de temps que pour être détecté par le µC. Qu'utilisez-vous?",
         answers: [
-            ["Une bascule monostable.", 0],
+            ["Une bascule monostable.", 1],
             ["Une bascule bistable.", 0],
             ["Une bascule tristable.", 0]
         ]
@@ -520,7 +520,7 @@ var questions = [{
         question: "Que sont les condensateurs de découplage?",
         answers: [
             ["Des réserves en cas de baisse de tension", 0],
-            ["Des filtres anti-parasites placés en parallèle sur l'alimentation des circuits intégrés", 0],
+            ["Des filtres anti-parasites placés en parallèle sur l'alimentation des circuits intégrés", 1],
             ["Des composants anti-surtension (électricité statique, ...)", 0]
         ]
     },
@@ -529,7 +529,7 @@ var questions = [{
         answers: [
             ["Division par zéro.", 0],
             ["Interruption.", 0],
-            ["Report d'addition", 0]
+            ["Report d'addition", 1]
         ]
     }
 ]
