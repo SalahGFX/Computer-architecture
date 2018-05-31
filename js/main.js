@@ -19,21 +19,13 @@ new Vue({
             }
         },
         _prec() {
-            var a = this.$refs.answer;
             if (this.index - 1 != -1) this.index--;
-            this.questions[this.index].answers.forEach((el, i)=> {
-              if (a[i]) a[i].className = 'answer';
-            });
 
             this.show = false;
             this.verify = false;
         },
         _next() {
-            var a = this.$refs.answer;
             if (this.index + 1 != this.questions.length) this.index++;
-            this.questions[this.index].answers.forEach((el, i)=> {
-              if (a[i]) a[i].className = 'answer';
-            });
 
             this.show = false;
             this.verify = false;
@@ -68,9 +60,16 @@ new Vue({
         _reset() {
             this.show = false;
             this.verify = false;
-            for (var i = 0; i < this.questions[this.index].answers.length; i++) this.$refs.answer[i].className = 'answer';
+            for (var i = 0; i < this.questions[this.index].answers.length; i++) {
+              if(this.$refs.answer[i]) this.$refs.answer[i].className = 'answer';
+            }
             this.questions[this.index].answers.sort(() => 0.5 - Math.random());
         }
+    },
+    watch: {
+      index: function() {
+        this._reset();
+      }
     },
     created() {
         this.questions.forEach(el => {
