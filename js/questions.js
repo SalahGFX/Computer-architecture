@@ -410,7 +410,7 @@ var questions = [{
         ]
     },
     {
-        question: "Un calibration des signaux analogiques en entrée ANX du microcontrôleur est nécessaire sion souhaite avoir une mesure qualitative de la grandeur physique.",
+        question: "Un calibration des signaux analogiques en entrée ANX du microcontrôleur est nécessaire si on souhaite avoir une mesure qualitative de la grandeur physique.",
         answers: [
             ["Vrai", 1],
             ["Faux", 0]
