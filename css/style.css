@@ -36,7 +36,7 @@
      max-width: 800px;
      color: #263238;
      margin: auto;
-     border-radius: 10px 10px 0 0;
+     border-radius: 10px;
      margin-top: 100px;
      font-family: "Roboto";
      -webkit-transform: scale(1);
@@ -47,6 +47,7 @@
      -o-transition: transform 0.3s ease;
      transition: transform 0.3s ease;
      transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+     overflow: hidden;
 }
  .box .slider {
      position: absolute;
@@ -140,6 +141,9 @@
      background: #E3F2FD;
      -webkit-box-shadow: 0 0 0 1px #2196F3 inset;
      box-shadow: 0 0 0 1px #2196F3 inset;
+}
+.box .answer.checked:last-child {
+    border-radius: 0 0 10px 10px;
 }
  .box .answer.true .icon {
      border-color: #4CAF50;
