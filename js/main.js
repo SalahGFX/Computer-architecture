@@ -20,15 +20,9 @@ new Vue({
         },
         _prec() {
             if (this.index - 1 != -1) this.index--;
-
-            this.show = false;
-            this.verify = false;
         },
         _next() {
             if (this.index + 1 != this.questions.length) this.index++;
-
-            this.show = false;
-            this.verify = false;
         },
         _show() {
             if (!this.verify) {
@@ -72,6 +66,8 @@ new Vue({
       }
     },
     created() {
+        // this.questions.sort(() => 0.5 - Math.random());
+
         this.questions.forEach(el => {
           el.answers.sort(() => 0.5 - Math.random());
         });
