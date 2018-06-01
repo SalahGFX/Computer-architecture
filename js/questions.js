@@ -133,7 +133,7 @@ var questions = [{
         ]
     },
     {
-        question: "Dans l'architecture HARVARD, sile bus provenant de la mémoire morte (ROM) contient 14 bits, cela signifie que:",
+        question: "Dans l'architecture HARVARD, si le bus provenant de la mémoire morte (ROM) contient 14 bits, cela signifie que:",
         answers: [
             ["8 bits sont allouées à la donnée", 1],
             ["8 bits sont allouées à l'adressage", 0],
